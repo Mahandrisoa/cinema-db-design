@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+    <xs:element name="Film">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element minOccurs="1" maxOccurs="unbounded" ref="Realisateur"/>
+                <xs:element minOccurs="0" maxOccurs="unbounded" ref="Acteur"/>
+                <xs:element minOccurs="0" maxOccurs="unbounded" ref="Critique"/>
+            </xs:sequence>
+            <xs:attribute name="id_film" use="required" type="xs:ID"/>
+            <xs:attribute name="nom_film" use="required" type="xs:string"/>
+            <xs:attribute name="date_sortie" use="required" type="xs:date"/>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="Acteur">
+        <xs:complexType>
+            <xs:complexContent>
+                <xs:extension base="Role">
+                    <xs:attribute name="id_personne" use="required" type="xs:IDREF"/>
+                    <xs:attribute name="id_film" use="required" type="xs:IDREF"/>
+                </xs:extension>
+            </xs:complexContent>
+        </xs:complexType>
+    </xs:element>
+    <xs:complexType name="Role">
+        <xs:sequence>
+            <xs:element ref="Role"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:element name="Role" type="xs:string"/>
+    <xs:element name="FilmGenre">
+        <xs:complexType>
+            <xs:attribute name="id_film" use="required" type="xs:IDREF"/>
+            <xs:attribute name="id_genre" use="required" type="xs:IDREF"/>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="Genre">
+        <xs:complexType>
+            <xs:attribute name="id_genre" use="required" type="xs:ID"/>
+            <xs:attribute name="nom_genre" default="ACTION" type="xs:string">
+                <xs:simpleType>
+                    <xs:restriction base="xs:token">
+                        <xs:enumeration value="ACTION"/>
+                        <xs:enumeration value="AVENTURE"/>
+                        <xs:enumeration value="SCI-FI"/>
+                        <xs:enumeration value="COMEDIE"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:attribute>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="Critique">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="Commentaire"/>
+                <xs:element ref="Note"/>
+            </xs:sequence>
+            <xs:attribute name="id_personne" use="required" type="xs:IDREF"/>
+            <xs:attribute name="id_film" use="required" type="xs:IDREF"/>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="Note" type="xs:string"/>
+    <xs:element name="Commentaire" type="xs:string"/>
+
+    <xs:element name="Personne">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="Nom"/>
+                <xs:element minOccurs="1" maxOccurs="3" ref="Prenom"/>
+                <xs:element ref="Date_naissance"/>
+            </xs:sequence>
+            <xs:attribute name="id_personne" use="required" type="xs:ID"/>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="Nom" type="xs:string"/>
+    <xs:element name="Prenom" type="xs:string"/>
+    <xs:element name="Date_naissance" type="xs:date"/>
+
+    <xs:element name="Realisateur">
+        <xs:complexType>
+            <xs:attribute name="id_personne" use="required" type="xs:IDREF"/>
+            <xs:attribute name="id_film" use="required" type="xs:IDREF"/>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>

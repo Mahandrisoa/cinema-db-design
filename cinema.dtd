@@ -11,8 +11,8 @@
 
 
 <!ELEMENT FilmGenre EMPTY>
-    <!ATTLIST id_film IDREF #REQUIRED>
-    <!ATTLIST id_genre IDREF #REQUIRED>
+    <!ATTLIST FilmGenre id_film IDREF #REQUIRED>
+    <!ATTLIST FilmGenre id_genre IDREF #REQUIRED>
 
 
 <!ELEMENT Genre EMPTY>
