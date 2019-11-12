@@ -1,0 +1,28 @@
+<!ELEMENT Film (Realisateur+, Acteur+, Critique* )>
+        <!ATTLIST Film id_film ID #REQUIRED>
+        <!ATTLIST Film nom_film CDATA #REQUIRED>
+        <!ATTLIST Film date_sortie CDATA #REQUIRED>
+        <!ATTLIST Film genre (ACTION|AVENTURE|SCI-FI|COMEDIE) 'ACTION'>
+
+<!ELEMENT Personne (Nom, Prenom+, Date_naissance)>
+        <!ATTLIST Personne id_personne ID #REQUIRED>
+
+<!ELEMENT Nom (#PCDATA)>
+<!ELEMENT Prenom (#PCDATA)>
+<!ELEMENT Date_naissance (#PCDATA)>
+
+<!ELEMENT Role (#PCDATA)>
+<!ELEMENT Acteur (Role)>
+        <!ATTLIST Acteur id_personne IDREF #REQUIRED>
+
+<!ELEMENT Realisateur EMPTY>
+        <!ATTLIST Realisateur id_personne IDREF #REQUIRED>
+
+<!ELEMENT Critique (Commentaire,Note)>
+        <!ATTLIST Critique id_personne IDREF #REQUIRED>
+        <!ATTLIST Critique id_film IDREF #REQUIRED>
+<!ELEMENT Note (#PCDATA)>
+<!ELEMENT Commentaire (#PCDATA)>
+
+
+
