@@ -1,0 +1,9 @@
+<realisateurs>
+    <Realisateur id_personne="11" id_film="1"/>
+    <Realisateur id_personne="11" id_film="2"/>
+    <Realisateur id_personne="11" id_film="3"/>
+    <Realisateur id_personne="11" id_film="4"/>
+    <Realisateur id_personne="11" id_film="5"/>
+    <Realisateur id_personne="11" id_film="6"/>
+    <Realisateur id_personne="12" id_film="7"/>
+</realisateurs>

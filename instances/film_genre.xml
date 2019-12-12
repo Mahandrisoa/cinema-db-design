@@ -1,0 +1,9 @@
+<film_genre>
+<FilmGenre id_film="1" id_genre="1"/>
+<FilmGenre id_film="2" id_genre="1"/>
+<FilmGenre id_film="3" id_genre="1"/>
+<FilmGenre id_film="4" id_genre="1"/>
+<FilmGenre id_film="5" id_genre="1"/>
+<FilmGenre id_film="6" id_genre="1"/>
+<FilmGenre id_film="7" id_genre="2"/>
+</film_genre>

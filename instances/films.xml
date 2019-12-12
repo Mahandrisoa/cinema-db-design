@@ -1,0 +1,106 @@
+<films>
+<Film id_film="1" nom_film="STAR-WARS:LA MENACE FANTOME" date_sortie="1999-01-01">
+  <!--1 or more repetitions:-->
+  <Realisateur id_personne="11" id_film="1"/>
+  <!--Zero or more repetitions:-->
+  <Critique id_personne="13" id_film="1">
+    <Commentaire>PAS MAL</Commentaire>
+    <Note>16</Note>
+  </Critique>
+</Film>
+
+
+<Film id_film="2" nom_film="STAR-WARS:ATTAQUE DES CLONES" date_sortie="2002-01-01">
+  <!--1 or more repetitions:-->
+  <Realisateur id_personne="11" id_film="2"/>
+</Film>
+
+
+<Film id_film="3" nom_film="STAR-WARS:LA REVANCHE DES SITHS" date_sortie="2005-01-01">
+  <!--1 or more repetitions:-->
+  <Realisateur id_personne="11" id_film="3"/>
+</Film>
+
+
+<Film id_film="4" nom_film="STAR-WARS:UN NOUVEL ESPOIR" date_sortie="1977-01-01">
+  <!--1 or more repetitions:-->
+  <Realisateur id_personne="11" id_film="4"/>
+  <!--Zero or more repetitions:-->
+  <Acteur id_personne="2" id_film="4">
+    <Role>HAN SOLO</Role>
+  </Acteur>
+  <Acteur id_personne="3" id_film="4">
+    <Role>LUKE SKYWALKER</Role>
+  </Acteur>
+  <Acteur id_personne="4" id_film="4">
+    <Role>LEIA</Role>
+  </Acteur>
+  <!--Zero or more repetitions:-->
+  <Critique id_personne="14" id_film="4">
+    <Commentaire>BIEN</Commentaire>
+    <Note>15</Note>
+  </Critique>
+</Film>
+
+
+<Film id_film="5" nom_film="STAR-WARS:EMPIRE CONTRE ATTAQUE" date_sortie="1980-01-01">
+  <!--1 or more repetitions:-->
+  <Realisateur id_personne="11" id_film="5"/>
+  <!--Zero or more repetitions:-->
+  <Acteur id_personne="2" id_film="5">
+    <Role>HAN SOLO</Role>
+  </Acteur>
+  <Acteur id_personne="3" id_film="5">
+    <Role>LUKE SKYWALKER</Role>
+  </Acteur>
+  <Acteur id_personne="4" id_film="5">
+    <Role>LEIA</Role>
+  </Acteur>
+</Film>
+
+
+<Film id_film="6" nom_film="STAR-WARS:LE RETOUR DU JEDI" date_sortie="1983-01-01">
+  <!--1 or more repetitions:-->
+  <Realisateur id_personne="11" id_film="6"/>
+  <!--Zero or more repetitions:-->
+  <Acteur id_personne="2" id_film="6">
+    <Role>HAN SOLO</Role>
+  </Acteur>
+  <Acteur id_personne="3" id_film="6">
+    <Role>LUKE SKYWALKER</Role>
+  </Acteur>
+  <Acteur id_personne="4" id_film="6">
+    <Role>LEIA</Role>
+  </Acteur>
+  <!--Zero or more repetitions:-->
+  <Critique id_personne="16" id_film="4">
+    <Commentaire>BRRRWWWAAAAAA</Commentaire>
+    <Note>16</Note>
+  </Critique>
+</Film>
+
+
+<Film id_film="7" nom_film="BRICE DE NICE" date_sortie="2005-01-01">
+  <!--1 or more repetitions:-->
+  <Realisateur id_personne="12" id_film="7"/>
+  <!--Zero or more repetitions:-->
+  <Acteur id_personne="1" id_film="7">
+    <Role>BRICE</Role>
+  </Acteur>
+  <!--Zero or more repetitions:-->
+  <Critique id_personne="13" id_film="7">
+    <Commentaire>DECALE</Commentaire>
+    <Note>18</Note>
+  </Critique>
+  <Critique id_personne="14" id_film="7">
+    <Commentaire>PAS TERRIBLE</Commentaire>
+    <Note>10</Note>
+  </Critique>
+  <Critique id_personne="16" id_film="7">
+    <Commentaire>EUH CASSE</Commentaire>
+    <Note>20</Note>
+  </Critique>
+</Film>
+
+</films>
+

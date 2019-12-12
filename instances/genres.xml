@@ -1,0 +1,6 @@
+<genres>
+<Genre id_genre="1" nom_genre="SCI-FI"/>
+<Genre id_genre="2" nom_genre="COMEDIE"/>
+<Genre id_genre="3" nom_genre="AVENTURE"/>
+<Genre id_genre="4" nom_genre="ACTION"/>
+</genres>

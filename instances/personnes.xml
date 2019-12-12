@@ -1,0 +1,82 @@
+<personnes>
+    <Personne id_personne="1">
+        <Nom>DUJARDIN</Nom>
+        <Prenom>JEAN</Prenom>
+        <Date_naissance>1972-10-03</Date_naissance>
+    </Personne>
+    <Personne id_personne="2">
+        <Nom>FORD</Nom>
+        <Prenom>HARRISON</Prenom>
+        <Date_naissance>1942-10-03</Date_naissance>
+    </Personne>
+    <Personne id_personne="3">
+        <Nom>HAMILL</Nom>
+        <Prenom>MARK</Prenom>
+        <Date_naissance>1951-10-03</Date_naissance>
+    </Personne>
+    <Personne id_personne="4">
+        <Nom>FISHER</Nom>
+        <Prenom>CARRIE</Prenom>
+        <Date_naissance>1956-10-03</Date_naissance>
+    </Personne>
+    <Personne id_personne="5">
+        <Nom>MAYHEW</Nom>
+        <Prenom>PETER</Prenom>
+        <Date_naissance>1944-10-03</Date_naissance>
+    </Personne>
+    <Personne id_personne="6">
+        <Nom>PORTMAN</Nom>
+        <Prenom>NATALIE</Prenom>
+        <Date_naissance>1981-10-03</Date_naissance>
+    </Personne>
+    <Personne id_personne="7">
+        <Nom>CHRISTENSEN</Nom>
+        <Prenom>HAYDEN</Prenom>
+        <Date_naissance>1981-10-03</Date_naissance>
+    </Personne>
+    <Personne id_personne="8">
+        <Nom>MCGREGOR</Nom>
+        <Prenom>EWAN</Prenom>
+        <Date_naissance>1971-10-03</Date_naissance>
+    </Personne>
+    <Personne id_personne="9">
+        <Nom>LEE</Nom>
+        <Prenom>CHRISTOPHER</Prenom>
+        <Date_naissance>1922-10-03</Date_naissance>
+    </Personne>
+    <Personne id_personne="10">
+        <Nom>LEE</Nom>
+        <Prenom>CHRISTOPHER</Prenom>
+        <Date_naissance>1922-10-03</Date_naissance>
+    </Personne>
+    <Personne id_personne="11">
+        <Nom>LUCAS</Nom>
+        <Prenom>GEORGES</Prenom>
+        <Date_naissance>1944-10-03</Date_naissance>
+    </Personne>
+    <Personne id_personne="12">
+        <Nom>HUTH</Nom>
+        <Prenom>JAMES</Prenom>
+        <Date_naissance>1968-10-03</Date_naissance>
+    </Personne>
+    <Personne id_personne="13">
+        <Nom>ZAHOUR</Nom>
+        <Prenom>MEHDI</Prenom>
+        <Date_naissance>1995-10-03</Date_naissance>
+    </Personne>
+    <Personne id_personne="14">
+        <Nom>BRENTOT</Nom>
+        <Prenom>THIBAULT</Prenom>
+        <Date_naissance>1994-07-07</Date_naissance>
+    </Personne>
+    <Personne id_personne="15">
+        <Nom>CHAUVIN</Nom>
+        <Prenom>ANTOINE</Prenom>
+        <Date_naissance>1968-10-03</Date_naissance>
+    </Personne>
+    <Personne id_personne="16">
+        <Nom>BAPTISTE</Nom>
+        <Prenom>ALEXANDRE</Prenom>
+        <Date_naissance>1994-10-13</Date_naissance>
+    </Personne>
+</personnes>
