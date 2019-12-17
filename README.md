@@ -25,7 +25,7 @@ Notre DTD est présenté dans le fichier [cinema.dtd](https://www-apps.univ-leha
 
 
 ## Création du XML Schema  
-Par lequel on soutire notre Xml Schema:  
+Par lequel on soutire notre Xml Schema [cinema.xsd](https://www-apps.univ-lehavre.fr/forge/bda_group/bda/blob/master/cinema.xsd):  
 
 
 ## Fichiers d'instances  
