@@ -6,13 +6,13 @@ Par la suite, des instances de données seront élaborées ainsi que des reqête
 
 ## Modelisation de la base de données
 Notre modèle physique de données de notre base de départ est comme suit:   
--  ** Personne **(id_personne:int, nom_personne: str, prenom_personne: str, date_naissance: date),  
--  ** Film **(id_film:int, nom_film:str, date_sortie: str),   
--  ** Genre **(id_genre: int, nom_genre: str),   
--  ** Acteur **(#id_film: int, #id_personne: int),   
--  ** Realisateur **(#id_film: int, #id_personne: int),   
--  ** Film_genre **(#id_film: int, #id_genre: int),
--  ** Critique **(#id_personne: int, #id_flim: int, note: float, commentaire: text)
+-  **Personne**(id_personne:int, nom_personne: str, prenom_personne: str, date_naissance: date),  
+-  **Film**(id_film:int, nom_film:str, date_sortie: str),   
+-  **Genre**(id_genre: int, nom_genre: str),   
+-  **Acteur**(#id_film: int, #id_personne: int),   
+-  **Realisateur**(#id_film: int, #id_personne: int),   
+-  **Film_genre**(#id_film: int, #id_genre: int),
+-  **Critique**(#id_personne: int, #id_flim: int, note: float, commentaire: text)
 
 Voici une illustration montrant notre modèle Entité relation:
-![Modèle Entité-Relation]! (https://www-apps.univ-lehavre.fr/forge/bda_group/bda/raw/master/modele_entite_relation.png "Modèle Entité Relation")
+![Modèle Entité-Relation!](https://www-apps.univ-lehavre.fr/forge/bda_group/bda/raw/master/modele_entite_relation.png "Modèle Entité Relation")
