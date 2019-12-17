@@ -41,3 +41,54 @@ Les instances de notre Xml Schema qui serviront pour tester notre modèle sont d
 ## Requêtes XQueries  
 Xquery est un langage de requête informatique permettant non seulement d'extraire des informations d'un document XML, ou d'une collection de documents XML, mais également d'effectuer des calculs complexes à partir des informations extraites et de reconstruire de nouveaux documents ou fragments XML.
 
+Voici quelques exemples appliqués sur notre base de données XML:  
+* Liste du nombre de films par réalisateurs  
+`element film_realisateurs {    
+  for $id in distinct-values(data(realisateurs/realisateur/@id_personne))  
+  return  
+  element film_realisateur {    
+    personnes/personne[@id_personne=$id],  
+   element nbFilms { count(films/film/realisateur[@id_personne=$id]) }     
+   }  
+}`  
+
+*  Liste du nombre d'acteurs par films  
+`element films_acteurs {
+    for $film in films/film 
+    return element film_acteur {
+        element film {
+            element id_film {data($film/@id_film)},
+            element nom {data($film/@nom_film)},
+            element date_sortie {data($film/@date_sortie)}
+        }, 
+        element nombre_acteurs {
+            count(acteurs/acteur[@id_film=$film/@id])
+        } 
+    }
+}`
+
+*  Liste du nombre de films par genre 
+`
+element genre_films {
+    for $genre in genres/genre
+    return element genre_film {
+        $genre, 
+        element nombre_films {
+            count (film_genres/filmgenre[@id_genre= $genre/@id_genre] )           
+        }
+    }
+}
+`
+
+*  La moyenne des notes de critiques de chaque films
+`
+element moyenne_critiques {
+    for $film in films/film 
+    return     
+    element moyenne_critique { 
+        element film { data($film/@nom_film) },
+        element note_moyenne { 
+            avg($film/critique/note)
+        }
+    }      
+}`
