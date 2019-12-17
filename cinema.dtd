@@ -1,39 +1,35 @@
-<!ELEMENT Film (Realisateur+, Acteur+, Critique* )>
-        <!ATTLIST Film id_film ID #REQUIRED>
-        <!ATTLIST Film nom_film CDATA #REQUIRED>
-        <!ATTLIST Film date_sortie CDATA #REQUIRED>
+<!ELEMENT film (realisateur+, acteur+, critique* )>
+   <!ATTLIST film id_film ID #REQUIRED>
+   <!ATTLIST film nom_film CDATA #REQUIRED>
+   <!ATTLIST film date_sortie CDATA #REQUIRED>
 
+<!ELEMENT acteur (role)>
+   <!ATTLIST acteur id_personne IDREF #REQUIRED>
+   <!ATTLIST acteur id_film IDREF #REQUIRED>
+<!ELEMENT role (#PCDATA)>
 
-<!ELEMENT Acteur (Role)>
-        <!ATTLIST Acteur id_personne IDREF #REQUIRED>
-        <!ATTLIST Acteur id_film IDREF #REQUIRED>
-<!ELEMENT Role (#PCDATA)>
+<!ELEMENT film_genre EMPTY>
+    <!ATTLIST film_genre id_film IDREF #REQUIRED>
+    <!ATTLIST film_genre id_genre IDREF #REQUIRED>
 
+<!ELEMENT genre EMPTY>
+    <!ATTLIST genre id_genre ID #REQUIRED>
+    <!ATTLIST genre nom_genre (ACTION|AVENTURE|SCI-FI|COMEDIE) 'ACTION'>
 
-<!ELEMENT FilmGenre EMPTY>
-    <!ATTLIST FilmGenre id_film IDREF #REQUIRED>
-    <!ATTLIST FilmGenre id_genre IDREF #REQUIRED>
+<!ELEMENT critique (commentaire,note)>
+    <!ATTLIST critique id_personne IDREF #REQUIRED>
+    <!ATTLIST critique id_film IDREF #REQUIRED>
+    <!ELEMENT note (#PCDATA)>
+    <!ELEMENT commentaire (#PCDATA)>
 
+<!ELEMENT personne (nom, prenom+, date_naissance)>
+    <!ATTLIST personne id_personne ID #REQUIRED>
 
-<!ELEMENT Genre EMPTY>
-    <!ATTLIST Genre id_genre ID #REQUIRED>
-    <!ATTLIST Genre nom_genre (ACTION|AVENTURE|SCI-FI|COMEDIE) 'ACTION'>
+<!ELEMENT nom (#PCDATA)>
+<!ELEMENT prenom (#PCDATA)>
+<!ELEMENT date_naissance (#PCDATA)>
 
+<!ELEMENT realisateur EMPTY>
+        <!ATTLIST realisateur id_personne IDREF #REQUIRED>
+        <!ATTLIST realisateur id_film IDREF #REQUIRED>
 
-<!ELEMENT Critique (Commentaire,Note)>
-    <!ATTLIST Critique id_personne IDREF #REQUIRED>
-    <!ATTLIST Critique id_film IDREF #REQUIRED>
-    <!ELEMENT Note (#PCDATA)>
-    <!ELEMENT Commentaire (#PCDATA)>
-
-
-<!ELEMENT Personne (Nom, Prenom+, Date_naissance)>
-        <!ATTLIST Personne id_personne ID #REQUIRED>
-<!ELEMENT Nom (#PCDATA)>
-<!ELEMENT Prenom (#PCDATA)>
-<!ELEMENT Date_naissance (#PCDATA)>
-
-
-<!ELEMENT Realisateur EMPTY>
-        <!ATTLIST Realisateur id_personne IDREF #REQUIRED>
-        <!ATTLIST Realisateur id_film IDREF #REQUIRED>
