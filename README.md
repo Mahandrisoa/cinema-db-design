@@ -21,7 +21,7 @@ Voici une illustration montrant notre modèle Entité relation:
 ![Modèle Entité-Relation!](https://www-apps.univ-lehavre.fr/forge/bda_group/bda/raw/master/modele_entite_relation.jpg "Modèle Entité Relation")  
    
 ## Création de la DTD  
-Notre DTD est présenté commet suit:  
+Notre DTD est présenté dans le fichier [cinema.dtd](https://www-apps.univ-lehavre.fr/forge/bda_group/bda/blob/master/cinema.dtd)
 
 
 ## Création du XML Schema  
