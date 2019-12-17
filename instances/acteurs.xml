@@ -1,29 +1,29 @@
 <acteurs>
-    <Acteur id_film="7" id_personne="1">
-        <Role>BRICE</Role>
-    </Acteur>
-    <Acteur id_film="4" id_personne="2">
-        <Role>HAN SOLO</Role>
-    </Acteur>
-    <Acteur id_film="5" id_personne="2">
-        <Role>HAN SOLO</Role>
-    </Acteur>
-    <Acteur id_film="4" id_personne="3">
-        <Role>LUKE SKYWALKER</Role>
-    </Acteur>
-    <Acteur id_film="5" id_personne="3">
-        <Role>LUKE SKYWALKER</Role>
-    </Acteur>
-    <Acteur id_film="6" id_personne="3">
-        <Role>LUKE SKYWALKER</Role>
-    </Acteur>
-    <Acteur id_film="4" id_personne="4">
-        <Role>LEIA</Role>
-    </Acteur>
-    <Acteur id_film="5" id_personne="4">
-        <Role>LEIA</Role>
-    </Acteur>
-    <Acteur id_film="6" id_personne="4">
-        <Role>LEIA</Role>
-    </Acteur>
+    <acteur id_film="7" id_personne="1">
+        <role>BRICE</role>
+    </acteur>
+    <acteur id_film="4" id_personne="2">
+        <role>HAN SOLO</role>
+    </acteur>
+    <acteur id_film="5" id_personne="2">
+        <role>HAN SOLO</role>
+    </acteur>
+    <acteur id_film="4" id_personne="3">
+        <role>LUKE SKYWALKER</role>
+    </acteur>
+    <acteur id_film="5" id_personne="3">
+        <role>LUKE SKYWALKER</role>
+    </acteur>
+    <acteur id_film="6" id_personne="3">
+        <role>LUKE SKYWALKER</role>
+    </acteur>
+    <acteur id_film="4" id_personne="4">
+        <role>LEIA</role>
+    </acteur>
+    <acteur id_film="5" id_personne="4">
+        <role>LEIA</role>
+    </acteur>
+    <acteur id_film="6" id_personne="4">
+        <role>LEIA</role>
+    </acteur>
 </acteurs>

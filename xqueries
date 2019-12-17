@@ -1,0 +1,48 @@
+--- Nombre de films par réalisateurs --- 
+element film_realisateurs {
+  for $id in distinct-values(data(realisateurs/realisateur/@id_personne))  
+  return 
+  element film_realisateur {
+    personnes/personne[@id_personne=$id],
+   element nbFilms { count(films/film/realisateur[@id_personne=$id]) }   
+   }
+}
+
+--- Nombre d'acteurs par films --- 
+element films_acteurs {
+    for $film in films/film 
+    return element film_acteur {
+        element film {
+            element id_film {data($film/@id_film)},
+            element nom {data($film/@nom_film)},
+            element date_sortie {data($film/@date_sortie)}
+        }, 
+        element nombre_acteurs {
+            count(acteurs/acteur[@id_film=$film/@id])
+        } 
+    }
+}
+
+--- Nombre de films par genre --- 
+element genre_films {
+    for $genre in genres/genre
+    return element genre_film {
+        $genre, 
+        element nombre_films {
+            count (film_genres/filmgenre[@id_genre= $genre/@id_genre] )           
+        }
+    }
+}
+
+--- Moyenne des notes par chaque critique --- 
+element moyenne_critiques {
+    for $film in films/film 
+    return     
+    element moyenne_critique { 
+        element film { data($film/@nom_film) },
+        element note_moyenne { 
+
+            avg($film/critique/note)
+        }
+    }      
+}
