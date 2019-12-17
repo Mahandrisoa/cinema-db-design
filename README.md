@@ -6,13 +6,13 @@ Par la suite, des instances de données seront élaborées ainsi que des reqête
 
 ## Modelisation de la base de données
 Notre modèle physique de données de notre base de départ est comme suit:   
--  **Personne**(__id_personne__:int, nom_personne: str, prenom_personne: str, date_naissance: date),  
--  **Film**(__id_film__:int, nom_film:str, date_sortie: str),   
--  **Genre**(__id_genre__: int, nom_genre: str),   
--  **Acteur**(__#id_film__: int, __#id_personne__: int),   
--  **Realisateur**(__#id_film__: int, __#id_personne__: int),   
--  **Film_genre**(__#id_film__: int, __#id_genre__: int),
--  **Critique**(__#id_personne__: int, __#id_flim__: int, note: float, commentaire: text)
+-  **Personne**( __id_personne__ :int, nom_personne: str, prenom_personne: str, date_naissance: date),  
+-  **Film**( __id_film__ :int, nom_film:str, date_sortie: str),   
+-  **Genre**( __id_genre__ : int, nom_genre: str),   
+-  **Acteur**( __#id_film__ : int, __#id_personne__: int),   
+-  **Realisateur**( __#id_film__ : int, __#id_personne__: int),   
+-  **Film_genre**( __#id_film__ : int, __#id_genre__: int),
+-  **Critique**( __#id_personne__ : int, __#id_flim__: int, note: float, commentaire: text)
 
 
 Voici une illustration montrant notre modèle Entité relation:     
@@ -20,40 +20,19 @@ Voici une illustration montrant notre modèle Entité relation:
   
 ![Modèle Entité-Relation!](https://www-apps.univ-lehavre.fr/forge/bda_group/bda/raw/master/modele_entite_relation.png "Modèle Entité Relation")  
    
+## Création de la DTD  
 Notre DTD est présenté commet suit:  
 
-`
-<!ELEMENT Film (Realisateur+, Acteur+, Critique* )>
-        <!ATTLIST Film id_film ID #REQUIRED>
-        <!ATTLIST Film nom_film CDATA #REQUIRED>
-        <!ATTLIST Film date_sortie CDATA #REQUIRED>
 
-<!ELEMENT Acteur (Role)>
-        <!ATTLIST Acteur id_personne IDREF #REQUIRED>
-        <!ATTLIST Acteur id_film IDREF #REQUIRED>
-<!ELEMENT Role (#PCDATA)>
+## Création du XML Schema  
+Par lequel on soutire notre Xml Schema:  
 
-<!ELEMENT FilmGenre EMPTY>
-    <!ATTLIST FilmGenre id_film IDREF #REQUIRED>
-    <!ATTLIST FilmGenre id_genre IDREF #REQUIRED>
 
-<!ELEMENT Genre EMPTY>
-    <!ATTLIST Genre id_genre ID #REQUIRED>
-    <!ATTLIST Genre nom_genre (ACTION|AVENTURE|SCI-FI|COMEDIE) 'ACTION'>
-
-<!ELEMENT Critique (Commentaire,Note)>
-    <!ATTLIST Critique id_personne IDREF #REQUIRED>
-    <!ATTLIST Critique id_film IDREF #REQUIRED>
-    <!ELEMENT Note (#PCDATA)>
-    <!ELEMENT Commentaire (#PCDATA)>
-
-<!ELEMENT Personne (Nom, Prenom+, Date_naissance)>
-        <!ATTLIST Personne id_personne ID #REQUIRED>
-<!ELEMENT Nom (#PCDATA)>
-<!ELEMENT Prenom (#PCDATA)>
-<!ELEMENT Date_naissance (#PCDATA)>
-
-<!ELEMENT Realisateur EMPTY>
-        <!ATTLIST Realisateur id_personne IDREF #REQUIRED>
-        <!ATTLIST Realisateur id_film IDREF #REQUIRED>
-`
+## Fichiers d'instances  
+Les instances de notre Xml Schema qui serviront pour tester notre modèle sont disponibles dans les fichiers xmls suivants:  
+1.  [personnes.xml](https://www-apps.univ-lehavre.fr/forge/bda_group/bda/blob/master/instances/personnes.xml)
+2.  [realisateurs.xml](https://www-apps.univ-lehavre.fr/forge/bda_group/bda/blob/master/instances/realisateurs.xml)
+3.  [acteurs.xml](https://www-apps.univ-lehavre.fr/forge/bda_group/bda/blob/master/instances/acteurs.xml)
+4.  [genres.xml](https://www-apps.univ-lehavre.fr/forge/bda_group/bda/blob/master/instances/genres.xml)
+5.  [films.xml](https://www-apps.univ-lehavre.fr/forge/bda_group/bda/blob/master/instances/films.xml)
+6.  [film_genres.xml](https://www-apps.univ-lehavre.fr/forge/bda_group/bda/blob/master/instances/film_genre.xml)
