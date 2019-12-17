@@ -18,7 +18,7 @@ Notre modèle physique de données de notre base de départ est comme suit:
 Voici une illustration montrant notre modèle Entité relation:     
   
   
-![Modèle Entité-Relation!](https://www-apps.univ-lehavre.fr/forge/bda_group/bda/raw/master/modele_entite_relation.png "Modèle Entité Relation")  
+![Modèle Entité-Relation!](https://www-apps.univ-lehavre.fr/forge/bda_group/bda/raw/master/modele_entite_relation.jpg "Modèle Entité Relation")  
    
 ## Création de la DTD  
 Notre DTD est présenté commet suit:  
