@@ -22,30 +22,43 @@ Voici une illustration montrant notre modèle Entité relation:
    
 Notre DTD est présenté commet suit:  
 
-<!ELEMENT Film (Realisateur+, Acteur+, Critique* )>
+
+`<!ELEMENT Film (Realisateur+, Acteur+, Critique* )>
         <!ATTLIST Film id_film ID #REQUIRED>
         <!ATTLIST Film nom_film CDATA #REQUIRED>
         <!ATTLIST Film date_sortie CDATA #REQUIRED>
+
+
 <!ELEMENT Acteur (Role)>
         <!ATTLIST Acteur id_personne IDREF #REQUIRED>
         <!ATTLIST Acteur id_film IDREF #REQUIRED>
 <!ELEMENT Role (#PCDATA)>
+
+
 <!ELEMENT FilmGenre EMPTY>
     <!ATTLIST FilmGenre id_film IDREF #REQUIRED>
     <!ATTLIST FilmGenre id_genre IDREF #REQUIRED>
+
+
 <!ELEMENT Genre EMPTY>
     <!ATTLIST Genre id_genre ID #REQUIRED>
     <!ATTLIST Genre nom_genre (ACTION|AVENTURE|SCI-FI|COMEDIE) 'ACTION'>
+
+
 <!ELEMENT Critique (Commentaire,Note)>
     <!ATTLIST Critique id_personne IDREF #REQUIRED>
     <!ATTLIST Critique id_film IDREF #REQUIRED>
     <!ELEMENT Note (#PCDATA)>
     <!ELEMENT Commentaire (#PCDATA)>
+
+
 <!ELEMENT Personne (Nom, Prenom+, Date_naissance)>
-    <!ATTLIST Personne id_personne ID #REQUIRED>
+        <!ATTLIST Personne id_personne ID #REQUIRED>
 <!ELEMENT Nom (#PCDATA)>
 <!ELEMENT Prenom (#PCDATA)>
 <!ELEMENT Date_naissance (#PCDATA)>
+
+
 <!ELEMENT Realisateur EMPTY>
         <!ATTLIST Realisateur id_personne IDREF #REQUIRED>
-        <!ATTLIST Realisateur id_film IDREF #REQUIRED>
+        <!ATTLIST Realisateur id_film IDREF #REQUIRED>`
