@@ -14,5 +14,5 @@ Notre modèle physique de données de notre base de départ est comme suit:
 -  **Film_genre**(#id_film: int, #id_genre: int),
 -  **Critique**(#id_personne: int, #id_flim: int, note: float, commentaire: text)
 
-Voici une illustration montrant notre modèle Entité relation:
+Voici une illustration montrant notre modèle Entité relation:   
 ![Modèle Entité-Relation!](https://www-apps.univ-lehavre.fr/forge/bda_group/bda/raw/master/modele_entite_relation.png "Modèle Entité Relation")
