@@ -36,3 +36,8 @@ Les instances de notre Xml Schema qui serviront pour tester notre modèle sont d
 4.  [genres.xml](https://www-apps.univ-lehavre.fr/forge/bda_group/bda/blob/master/instances/genres.xml)
 5.  [films.xml](https://www-apps.univ-lehavre.fr/forge/bda_group/bda/blob/master/instances/films.xml)
 6.  [film_genres.xml](https://www-apps.univ-lehavre.fr/forge/bda_group/bda/blob/master/instances/film_genre.xml)
+  
+
+## Requêtes XQueries  
+Xquery est un langage de requête informatique permettant non seulement d'extraire des informations d'un document XML, ou d'une collection de documents XML, mais également d'effectuer des calculs complexes à partir des informations extraites et de reconstruire de nouveaux documents ou fragments XML.
+
