@@ -5,7 +5,7 @@
             <xs:sequence>
                 <xs:element minOccurs="1" maxOccurs="unbounded" ref="realisateur"/>
                 <xs:element minOccurs="0" maxOccurs="unbounded" ref="acteur"/>
-                <xs:element minOccurs="0" maxOccurs="unbounded" ref="critique"/>
+                <xs:elemennt ref="critiques"/>
             </xs:sequence>
             <xs:attribute name="id_film" use="required" type="xs:ID"/>
             <xs:attribute name="nom_film" use="required" type="xs:string"/>
@@ -23,6 +23,15 @@
             </xs:complexContent>
         </xs:complexType>
     </xs:element>
+
+    <xs:element name="critiques">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element minOccurs="0" maxOccurs="unbounded" ref="critique"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
     <xs:complexType name="role">
         <xs:sequence>
             <xs:element ref="role"/>

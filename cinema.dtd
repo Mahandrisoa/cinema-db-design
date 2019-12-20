@@ -1,4 +1,4 @@
-<!ELEMENT film (realisateur+, acteur+, critique* )>
+<!ELEMENT film (realisateur+, acteur+, critiques)>
    <!ATTLIST film id_film ID #REQUIRED>
    <!ATTLIST film nom_film CDATA #REQUIRED>
    <!ATTLIST film date_sortie CDATA #REQUIRED>
@@ -15,6 +15,8 @@
 <!ELEMENT genre EMPTY>
     <!ATTLIST genre id_genre ID #REQUIRED>
     <!ATTLIST genre nom_genre (ACTION|AVENTURE|SCI-FI|COMEDIE) 'ACTION'>
+
+<!ELEMENT critiques (critique*)>
 
 <!ELEMENT critique (commentaire,note)>
     <!ATTLIST critique id_personne IDREF #REQUIRED>
