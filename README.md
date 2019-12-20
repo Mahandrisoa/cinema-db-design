@@ -1,3 +1,5 @@
+
+
 # BASE DE DONNEES XML
 Le but de ce projet est de réaliser une modélisation d'une base de données relationnelle en Xml, d'en tirer les DTD ou [Document Type Definition](https://fr.wikipedia.org/wiki/Document_type_definition)
 pour la validation mais aussi de créer des implémentations Xsd ou [Xml Schema Definition](https://fr.wikipedia.org/wiki/XML_Schema) qui ont été conçu afin de pallier à un certain nombre de lacunes observées dans les DTD.   
@@ -43,7 +45,7 @@ Xquery est un langage de requête informatique permettant non seulement d'extrai
 
 Voici quelques exemples appliqués sur notre base de données XML:  
 * Liste du nombre de films par réalisateurs  
-`element film_realisateurs {    
+`element film_realisateurs {         
   for $id in distinct-values(data(realisateurs/realisateur/@id_personne))  
   return  
   element film_realisateur {    
@@ -67,7 +69,7 @@ Voici quelques exemples appliqués sur notre base de données XML:
     }
 }`
 
-*  Liste du nombre de films par genre 
+*  Liste du nombre de films par genre   
 `
 element genre_films {
     for $genre in genres/genre
@@ -91,4 +93,11 @@ element moyenne_critiques {
             avg($film/critique/note)
         }
     }      
-}`
+}`  
+
+## Bilan général  
+Nous avons vu comment implémenter notre modèle avec les bases de données Xml, nous avons pu créer des contraintes et validations de
+nos elements en DTD puis plus détaillé en Xml Schema. A la fin nous avons interroger notre base de donnée avec les requêtes Xqueries.  
+XQuery et SQL sont chacun des langages de requêtes, l'un pour XML et l'autre pour SQL.
+Ces deux langages sont très différents. En effet, ils portent sur des modèles de données différents (hiérarchique vs. relationnel). Bien que SQL soit plus ancien, il se contente de porter des requêtes alors que, nous l'avons vu, XQuery est un réel langage de programmation.  
+Par contre, il est possible de faire des modifications de données avec SQL alors que le XQuery 1.0 ne propose que d'exploiter les données. 
